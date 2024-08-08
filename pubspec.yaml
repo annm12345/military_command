@@ -1,0 +1,729 @@
+name: militarycommand
+description: "A new Flutter project."
+# The following line prevents the package from being accidentally published to
+# pub.dev using `flutter pub publish`. This is preferred for private packages.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+# The following defines the version and build number for your application.
+# A version number is three numbers separated by dots, like 1.2.43
+# followed by an optional build number separated by a +.
+# Both the version and the builder number may be overridden in flutter
+# build by specifying --build-name and --build-number, respectively.
+# In Android, build-name is used as versionName while build-number used as versionCode.
+# Read more about Android versioning at https://developer.android.com/studio/publish/versioning
+# In iOS, build-name is used as CFBundleShortVersionString while build-number is used as CFBundleVersion.
+# Read more about iOS versioning at
+# https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
+# In Windows, build-name is used as the major, minor, and patch parts
+# of the product and file versions while build-number is used as the build suffix.
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.4.1 <4.0.0'
+
+# Dependencies specify other packages that your package needs in order to work.
+# To automatically upgrade your package dependencies to the latest versions
+# consider running `flutter pub upgrade --major-versions`. Alternatively,
+# dependencies can be manually updated by changing the version numbers below to
+# the latest version available on pub.dev. To see which dependencies have newer
+# versions available, run `flutter pub outdated`.
+dependencies:
+  flutter:
+    sdk: flutter
+
+
+  # The following adds the Cupertino Icons font to your application.
+  # Use with the CupertinoIcons class for iOS style icons.
+  cupertino_icons: ^1.0.6
+  velocity_x: ^4.1.2
+  get: ^4.6.6
+  http: ^0.13.4
+  flutter_map: ^3.1.0  
+  latlong2: ^0.8.1
+  geolocator: ^7.0.2
+  connectivity: ^3.0.6
+  path: ^1.9.0
+  vector_math: ^2.1.1
+  speech_to_text: ^6.6.2
+  sqflite: ^2.0.3
+  path_provider: ^2.0.11
+  connectivity_plus: ^2.3.8
+  cached_network_image: ^3.1.0
+  flutter_pdfview: ^1.0.4
+  shared_preferences: ^2.0.8
+  font_awesome_flutter: ^10.1.0
+  file_picker: ^5.0.0
+  permission_handler: ^10.0.0
+  mbtiles: ^0.1.1
+  flutter_cache_manager: ^3.3.0
+  flutter_map_tile_caching: ^6.1.0
+  universal_html: ^2.0.6
+  flutter_colorpicker: ^0.4.0 
+  image_picker: ^0.8.4+4
+  flutter_compass: ^0.6.0 
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  # The "flutter_lints" package below contains a set of recommended lints to
+  # encourage good coding practices. The lint set provided by the package is
+  # activated in the `analysis_options.yaml` file located at the root of your
+  # package. See that file for information about deactivating specific lint
+  # rules and activating additional ones.
+  flutter_lints: ^3.0.0
+
+# For information on the generic Dart part of this file, see the
+# following page: https://dart.dev/tools/pub/pubspec
+
+# The following section is specific to Flutter packages.
+flutter:
+
+  # The following line ensures that the Material Icons font is
+  # included with your application, so that you can use the icons in
+  # the material Icons class.
+  uses-material-design: true
+
+  # To add assets to your application, add an assets section, like this:
+  assets:
+    - assets/fonts/
+    - assets/icons/
+    - assets/images/ 
+    - assets/book/
+    # - assets/maptiles/
+    - icon/
+    - assets/book/book.pdf
+    # - assets/maptiles/17/100503/
+    # - assets/maptiles/17/100504/
+    # - assets/maptiles/17/100505/
+    # - assets/maptiles/17/100506/
+    # - assets/maptiles/17/100507/
+    # - assets/maptiles/17/100508/
+    # - assets/maptiles/17/100509/
+    # - assets/maptiles/17/100510/
+    # - assets/maptiles/17/100511/
+    # - assets/maptiles/17/100512/
+    # - assets/maptiles/17/100513/
+    # - assets/maptiles/17/100514/
+    # - assets/maptiles/17/100515/
+    # - assets/maptiles/17/100516/
+    # - assets/maptiles/17/100517/
+    # - assets/maptiles/17/100518/
+    # - assets/maptiles/17/100519/
+    # - assets/maptiles/17/100520/
+    # - assets/maptiles/17/100521/
+    # - assets/maptiles/17/100522/
+    # - assets/maptiles/17/100523/
+    # - assets/maptiles/17/100524/
+    # - assets/maptiles/17/100525/
+    # - assets/maptiles/17/100526/
+    # - assets/maptiles/17/100527/
+    # - assets/maptiles/17/100528/
+    # - assets/maptiles/17/100529/
+    # - assets/maptiles/17/100530/
+    # - assets/maptiles/17/100531/
+    # - assets/maptiles/17/100532/
+    # - assets/maptiles/17/100533/
+    # - assets/maptiles/17/100534/
+    # - assets/maptiles/17/100535/
+    # - assets/maptiles/17/100536/
+    # - assets/maptiles/17/100537/
+    # - assets/maptiles/17/100538/
+    # - assets/maptiles/17/100539/
+    # - assets/maptiles/17/100540/
+    # - assets/maptiles/17/100541/
+    # - assets/maptiles/17/100542/
+    # - assets/maptiles/17/100543/
+    # - assets/maptiles/17/100544/
+    # - assets/maptiles/17/100545/
+    # - assets/maptiles/17/100546/
+    # - assets/maptiles/17/100547/
+    # - assets/maptiles/17/100548/
+    # - assets/maptiles/17/100549/
+    # - assets/maptiles/17/100550/
+    # - assets/maptiles/17/100551/
+    # - assets/maptiles/17/100552/
+    # - assets/maptiles/17/100553/
+    # - assets/maptiles/17/100554/
+    # - assets/maptiles/17/100555/
+    # - assets/maptiles/17/100556/
+    # - assets/maptiles/17/100557/
+    # - assets/maptiles/17/100558/
+    # - assets/maptiles/17/100559/
+    # - assets/maptiles/17/100560/
+    # - assets/maptiles/17/100561/
+    # - assets/maptiles/17/100562/
+    # - assets/maptiles/17/100563/
+    # - assets/maptiles/17/100564/
+    # - assets/maptiles/17/100565/
+    # - assets/maptiles/17/100566/
+    # - assets/maptiles/17/100567/
+    # - assets/maptiles/17/100568/
+    # - assets/maptiles/17/100569/
+    # - assets/maptiles/17/100570/
+    # - assets/maptiles/17/100571/
+    # - assets/maptiles/17/100572/
+    # - assets/maptiles/17/100573/
+    # - assets/maptiles/17/100574/
+    # - assets/maptiles/17/100575/
+    # - assets/maptiles/17/100576/
+    # - assets/maptiles/17/100577/
+    # - assets/maptiles/17/100578/
+    # - assets/maptiles/17/100579/
+    # - assets/maptiles/17/100580/
+    # - assets/maptiles/17/100581/
+    # - assets/maptiles/17/100582/
+    # - assets/maptiles/17/100583/
+    # - assets/maptiles/17/100584/
+    # - assets/maptiles/17/100585/
+    # - assets/maptiles/17/100586/
+    # - assets/maptiles/17/100587/
+    # - assets/maptiles/17/100588/
+    # - assets/maptiles/17/100589/
+    # - assets/maptiles/17/100590/
+    # - assets/maptiles/17/100591/
+    # - assets/maptiles/17/100592/
+    # - assets/maptiles/17/100593/
+    # - assets/maptiles/17/100594/
+    # - assets/maptiles/17/100595/
+    # - assets/maptiles/17/100596/
+    # - assets/maptiles/17/100597/
+    # - assets/maptiles/17/100598/
+    # - assets/maptiles/17/100599/
+    # - assets/maptiles/17/100600/
+    # - assets/maptiles/17/100601/
+    # - assets/maptiles/17/100602/
+    # - assets/maptiles/17/100603/
+    # - assets/maptiles/17/100604/
+    # - assets/maptiles/17/100605/
+    # - assets/maptiles/17/100606/
+    # - assets/maptiles/17/100607/
+    # - assets/maptiles/17/100608/
+    # - assets/maptiles/17/100609/
+    # - assets/maptiles/17/100610/
+    # - assets/maptiles/17/100611/
+    # - assets/maptiles/17/100612/
+    # - assets/maptiles/17/100613/
+    # - assets/maptiles/17/100614/
+    # - assets/maptiles/17/100615/
+    # - assets/maptiles/17/100616/
+    # - assets/maptiles/17/100617/
+    # - assets/maptiles/17/100618/
+    # - assets/maptiles/17/100619/
+    # - assets/maptiles/17/100620/
+    # - assets/maptiles/17/100621/
+    # - assets/maptiles/17/100622/
+    # - assets/maptiles/17/100623/
+    # - assets/maptiles/17/100624/
+    # - assets/maptiles/17/100625/
+    # - assets/maptiles/17/100626/
+    # - assets/maptiles/17/100627/
+    # - assets/maptiles/17/100628/
+    # - assets/maptiles/17/100629/
+    # - assets/maptiles/17/100630/
+    # - assets/maptiles/17/100631/
+    # - assets/maptiles/17/100632/
+    # - assets/maptiles/17/100633/
+    # - assets/maptiles/17/100634/
+    # - assets/maptiles/17/100635/
+    # - assets/maptiles/17/100636/
+    # - assets/maptiles/17/100637/
+    # - assets/maptiles/17/100638/
+    # - assets/maptiles/17/100639/
+    # - assets/maptiles/17/100640/
+    # - assets/maptiles/17/100641/
+    # - assets/maptiles/17/100642/
+    # - assets/maptiles/17/100643/
+    # - assets/maptiles/17/100644/
+    # - assets/maptiles/17/100645/
+    # - assets/maptiles/17/100646/
+    # - assets/maptiles/17/100647/
+    # - assets/maptiles/17/100648/
+    # - assets/maptiles/17/100649/
+    # - assets/maptiles/17/100650/
+    # - assets/maptiles/17/100651/
+    # - assets/maptiles/17/100652/
+    # - assets/maptiles/17/100653/
+    # - assets/maptiles/17/100654/
+    # - assets/maptiles/17/100655/
+    # - assets/maptiles/17/100656/
+    # - assets/maptiles/17/100657/
+    # - assets/maptiles/17/100658/
+    # - assets/maptiles/17/100659/
+    # - assets/maptiles/17/100660/
+    # - assets/maptiles/17/100661/
+    # - assets/maptiles/17/100662/
+    # - assets/maptiles/17/100663/
+    # - assets/maptiles/17/100664/
+    # - assets/maptiles/17/100665/
+    # - assets/maptiles/17/100666/
+    # - assets/maptiles/17/100667/
+    # - assets/maptiles/17/100668/
+    # - assets/maptiles/17/100669/
+    # - assets/maptiles/17/100670/
+    # - assets/maptiles/17/100671/
+    # - assets/maptiles/17/100672/
+    # - assets/maptiles/17/100673/
+    # - assets/maptiles/17/100674/
+    # - assets/maptiles/17/100675/
+    # - assets/maptiles/17/100676/
+    # - assets/maptiles/17/100677/
+    # - assets/maptiles/17/100678/
+    # - assets/maptiles/17/100679/
+    # - assets/maptiles/17/100680/
+    # - assets/maptiles/17/100681/
+    # - assets/maptiles/17/100682/
+    # - assets/maptiles/17/100683/
+    # - assets/maptiles/17/100684/
+    # - assets/maptiles/17/100685/
+    # - assets/maptiles/17/100686/
+    # - assets/maptiles/17/100687/
+    # - assets/maptiles/17/100688/
+    # - assets/maptiles/17/100689/
+    # - assets/maptiles/17/100690/
+    # - assets/maptiles/17/100691/
+    # - assets/maptiles/17/100692/
+    # - assets/maptiles/17/100693/
+    # - assets/maptiles/17/100694/
+    # - assets/maptiles/17/100695/
+    # - assets/maptiles/17/100696/
+    # - assets/maptiles/17/100697/
+    # - assets/maptiles/17/100698/
+    # - assets/maptiles/17/100699/
+    # - assets/maptiles/17/100700/
+    # - assets/maptiles/17/100701/
+    # - assets/maptiles/17/100702/
+    # - assets/maptiles/17/100703/
+    # - assets/maptiles/17/100704/
+    # - assets/maptiles/17/100705/
+    # - assets/maptiles/17/100706/
+    # - assets/maptiles/17/100707/
+    # - assets/maptiles/17/100708/
+    # - assets/maptiles/17/100709/
+    # - assets/maptiles/17/100710/
+    # - assets/maptiles/17/100711/
+    # - assets/maptiles/17/100712/
+    # - assets/maptiles/17/100713/
+    # - assets/maptiles/17/100714/
+    # - assets/maptiles/17/100715/
+    # - assets/maptiles/17/100716/
+    # - assets/maptiles/17/100717/
+    # - assets/maptiles/17/100718/
+    # - assets/maptiles/17/100719/
+    # - assets/maptiles/17/100720/
+    # - assets/maptiles/17/100721/
+    # - assets/maptiles/17/100722/
+    # - assets/maptiles/17/100723/
+    # - assets/maptiles/17/100724/
+    # - assets/maptiles/17/100725/
+    # - assets/maptiles/17/100726/
+    # - assets/maptiles/17/100727/
+    # - assets/maptiles/17/100728/
+    # - assets/maptiles/17/100729/
+    # - assets/maptiles/17/100730/
+    # - assets/maptiles/17/100731/
+    # - assets/maptiles/17/100732/
+    # - assets/maptiles/17/100733/
+    # - assets/maptiles/17/100734/
+    # - assets/maptiles/17/100735/
+    # - assets/maptiles/17/100736/
+    # - assets/maptiles/17/100737/
+    # - assets/maptiles/17/100738/
+    # - assets/maptiles/17/100739/
+    # - assets/maptiles/17/100740/
+    # - assets/maptiles/17/100741/
+    # - assets/maptiles/17/100742/
+    # - assets/maptiles/17/100743/
+    # - assets/maptiles/17/100744/
+    # - assets/maptiles/17/100745/
+    # - assets/maptiles/17/100746/
+    # - assets/maptiles/17/100747/
+    # - assets/maptiles/17/100748/
+    # - assets/maptiles/17/100749/
+    # - assets/maptiles/17/100750/
+    # - assets/maptiles/17/100751/
+    # - assets/maptiles/17/100752/
+    # - assets/maptiles/17/100753/
+    # - assets/maptiles/17/100754/
+    # - assets/maptiles/17/100755/
+    # - assets/maptiles/17/100756/
+    # - assets/maptiles/17/100757/
+    # - assets/maptiles/17/100758/
+    # - assets/maptiles/17/100759/
+    # - assets/maptiles/17/100760/
+    # - assets/maptiles/17/100761/
+    # - assets/maptiles/17/100762/
+    # - assets/maptiles/17/100763/
+    # - assets/maptiles/17/100764/
+    # - assets/maptiles/17/100765/
+    # - assets/maptiles/17/100766/
+    # - assets/maptiles/17/100767/
+    # - assets/maptiles/17/100768/
+    # - assets/maptiles/17/100769/
+    # - assets/maptiles/17/100770/
+    # - assets/maptiles/17/100771/
+    # - assets/maptiles/17/100772/
+    # - assets/maptiles/17/100773/
+    # - assets/maptiles/17/100774/
+    # - assets/maptiles/17/100775/
+    # - assets/maptiles/17/100776/
+    # - assets/maptiles/17/100777/
+    # - assets/maptiles/17/100778/
+    # - assets/maptiles/17/100779/
+    # - assets/maptiles/17/100780/
+    # - assets/maptiles/17/100781/
+    # - assets/maptiles/17/100782/
+    # - assets/maptiles/17/100783/
+    # - assets/maptiles/17/100784/
+    # - assets/maptiles/17/100785/
+    # - assets/maptiles/17/100786/
+    # - assets/maptiles/17/100787/
+    # - assets/maptiles/17/100788/
+    # - assets/maptiles/17/100789/
+    # - assets/maptiles/17/100790/
+    # - assets/maptiles/17/100791/
+    # - assets/maptiles/17/100792/
+    # - assets/maptiles/17/100793/
+    # - assets/maptiles/17/100794/
+    # - assets/maptiles/17/100795/
+    # - assets/maptiles/17/100796/
+    # - assets/maptiles/17/100797/
+    # - assets/maptiles/17/100798/
+    # - assets/maptiles/17/100799/
+    # - assets/maptiles/17/100800/
+    # - assets/maptiles/17/100801/
+    # - assets/maptiles/17/100802/
+    # - assets/maptiles/17/100803/
+    # - assets/maptiles/17/100804/
+    # - assets/maptiles/17/100805/
+    # - assets/maptiles/17/100806/
+    # - assets/maptiles/17/100807/
+    # - assets/maptiles/17/100808/
+    # - assets/maptiles/17/100809/
+    # - assets/maptiles/17/100810/
+    # - assets/maptiles/17/100811/
+    # - assets/maptiles/17/100812/
+    # - assets/maptiles/17/100813/
+    # - assets/maptiles/17/100814/
+    # - assets/maptiles/17/100815/
+    # - assets/maptiles/17/100816/
+    # - assets/maptiles/17/100817/
+    # - assets/maptiles/17/100818/
+    # - assets/maptiles/17/100819/
+    # - assets/maptiles/17/100820/
+    # - assets/maptiles/17/100821/
+    # - assets/maptiles/17/100822/
+    # - assets/maptiles/17/100823/
+    # - assets/maptiles/17/100824/
+    # - assets/maptiles/17/100825/
+    # - assets/maptiles/17/100826/
+    # - assets/maptiles/17/100827/
+    # - assets/maptiles/17/100828/
+    # - assets/maptiles/17/100829/
+    # - assets/maptiles/17/100830/
+    # - assets/maptiles/17/100831/
+    # - assets/maptiles/17/100832/
+    # - assets/maptiles/17/100833/
+    # - assets/maptiles/17/100834/
+    # - assets/maptiles/17/100835/
+    # - assets/maptiles/17/100836/
+    # - assets/maptiles/17/100837/
+    # - assets/maptiles/17/100838/
+    # - assets/maptiles/17/100839/
+    # - assets/maptiles/17/100840/
+    # - assets/maptiles/16/50251/
+    # - assets/maptiles/16/50252/
+    # - assets/maptiles/16/50253/
+    # - assets/maptiles/16/50254/
+    # - assets/maptiles/16/50255/
+    # - assets/maptiles/16/50256/
+    # - assets/maptiles/16/50257/
+    # - assets/maptiles/16/50258/
+    # - assets/maptiles/16/50259/
+    # - assets/maptiles/16/50260/
+    # - assets/maptiles/16/50261/
+    # - assets/maptiles/16/50262/
+    # - assets/maptiles/16/50263/
+    # - assets/maptiles/16/50264/
+    # - assets/maptiles/16/50265/
+    # - assets/maptiles/16/50266/
+    # - assets/maptiles/16/50267/
+    # - assets/maptiles/16/50268/
+    # - assets/maptiles/16/50269/
+    # - assets/maptiles/16/50270/
+    # - assets/maptiles/16/50271/
+    # - assets/maptiles/16/50272/
+    # - assets/maptiles/16/50273/
+    # - assets/maptiles/16/50274/
+    # - assets/maptiles/16/50275/
+    # - assets/maptiles/16/50276/
+    # - assets/maptiles/16/50277/
+    # - assets/maptiles/16/50278/
+    # - assets/maptiles/16/50279/
+    # - assets/maptiles/16/50280/
+    # - assets/maptiles/16/50281/
+    # - assets/maptiles/16/50282/
+    # - assets/maptiles/16/50283/
+    # - assets/maptiles/16/50284/
+    # - assets/maptiles/16/50285/
+    # - assets/maptiles/16/50286/
+    # - assets/maptiles/16/50287/
+    # - assets/maptiles/16/50288/
+    # - assets/maptiles/16/50289/
+    # - assets/maptiles/16/50290/
+    # - assets/maptiles/16/50291/
+    # - assets/maptiles/16/50292/
+    # - assets/maptiles/16/50293/
+    # - assets/maptiles/16/50294/
+    # - assets/maptiles/16/50295/
+    # - assets/maptiles/16/50296/
+    # - assets/maptiles/16/50297/
+    # - assets/maptiles/16/50298/
+    # - assets/maptiles/16/50299/
+    # - assets/maptiles/16/50300/
+    # - assets/maptiles/16/50301/
+    # - assets/maptiles/16/50302/
+    # - assets/maptiles/16/50303/
+    # - assets/maptiles/16/50304/
+    # - assets/maptiles/16/50305/
+    # - assets/maptiles/16/50306/
+    # - assets/maptiles/16/50307/
+    # - assets/maptiles/16/50308/
+    # - assets/maptiles/16/50309/
+    # - assets/maptiles/16/50310/
+    # - assets/maptiles/16/50311/
+    # - assets/maptiles/16/50312/
+    # - assets/maptiles/16/50313/
+    # - assets/maptiles/16/50314/
+    # - assets/maptiles/16/50315/
+    # - assets/maptiles/16/50316/
+    # - assets/maptiles/16/50317/
+    # - assets/maptiles/16/50318/
+    # - assets/maptiles/16/50319/
+    # - assets/maptiles/16/50320/
+    # - assets/maptiles/16/50321/
+    # - assets/maptiles/16/50322/
+    # - assets/maptiles/16/50323/
+    # - assets/maptiles/16/50324/
+    # - assets/maptiles/16/50325/
+    # - assets/maptiles/16/50326/
+    # - assets/maptiles/16/50327/
+    # - assets/maptiles/16/50328/
+    # - assets/maptiles/16/50329/
+    # - assets/maptiles/16/50330/
+    # - assets/maptiles/16/50331/
+    # - assets/maptiles/16/50332/
+    # - assets/maptiles/16/50333/
+    # - assets/maptiles/16/50334/
+    # - assets/maptiles/16/50335/
+    # - assets/maptiles/16/50336/
+    # - assets/maptiles/16/50337/
+    # - assets/maptiles/16/50338/
+    # - assets/maptiles/16/50339/
+    # - assets/maptiles/16/50340/
+    # - assets/maptiles/16/50341/
+    # - assets/maptiles/16/50342/
+    # - assets/maptiles/16/50343/
+    # - assets/maptiles/16/50344/
+    # - assets/maptiles/16/50345/
+    # - assets/maptiles/16/50346/
+    # - assets/maptiles/16/50347/
+    # - assets/maptiles/16/50348/
+    # - assets/maptiles/16/50349/
+    # - assets/maptiles/16/50350/
+    # - assets/maptiles/16/50351/
+    # - assets/maptiles/16/50352/
+    # - assets/maptiles/16/50353/
+    # - assets/maptiles/16/50354/
+    # - assets/maptiles/16/50355/
+    # - assets/maptiles/16/50356/
+    # - assets/maptiles/16/50357/
+    # - assets/maptiles/16/50358/
+    # - assets/maptiles/16/50359/
+    # - assets/maptiles/16/50360/
+    # - assets/maptiles/16/50361/
+    # - assets/maptiles/16/50362/
+    # - assets/maptiles/16/50363/
+    # - assets/maptiles/16/50364/
+    # - assets/maptiles/16/50365/
+    # - assets/maptiles/16/50366/
+    # - assets/maptiles/16/50367/
+    # - assets/maptiles/16/50368/
+    # - assets/maptiles/16/50369/
+    # - assets/maptiles/16/50370/
+    # - assets/maptiles/16/50371/
+    # - assets/maptiles/16/50372/
+    # - assets/maptiles/16/50373/
+    # - assets/maptiles/16/50374/
+    # - assets/maptiles/16/50375/
+    # - assets/maptiles/16/50376/
+    # - assets/maptiles/16/50377/
+    # - assets/maptiles/16/50378/
+    # - assets/maptiles/16/50379/
+    # - assets/maptiles/15/25125/
+    # - assets/maptiles/15/25126/
+    # - assets/maptiles/15/25127/
+    # - assets/maptiles/15/25128/
+    # - assets/maptiles/15/25129/
+    # - assets/maptiles/15/25130/
+    # - assets/maptiles/15/25131/
+    # - assets/maptiles/15/25132/
+    # - assets/maptiles/15/25133/
+    # - assets/maptiles/15/25134/
+    # - assets/maptiles/15/25135/
+    # - assets/maptiles/15/25136/
+    # - assets/maptiles/15/25137/
+    # - assets/maptiles/15/25138/
+    # - assets/maptiles/15/25139/
+    # - assets/maptiles/15/25140/
+    # - assets/maptiles/15/25141/
+    # - assets/maptiles/15/25142/
+    # - assets/maptiles/15/25143/
+    # - assets/maptiles/15/25144/
+    # - assets/maptiles/15/25145/
+    # - assets/maptiles/15/25146/
+    # - assets/maptiles/15/25147/
+    # - assets/maptiles/15/25148/
+    # - assets/maptiles/15/25149/
+    # - assets/maptiles/15/25150/
+    # - assets/maptiles/15/25151/
+    # - assets/maptiles/15/25152/
+    # - assets/maptiles/15/25153/
+    # - assets/maptiles/15/25154/
+    # - assets/maptiles/15/25155/
+    # - assets/maptiles/15/25156/
+    # - assets/maptiles/15/25157/
+    # - assets/maptiles/15/25158/
+    # - assets/maptiles/15/25159/
+    # - assets/maptiles/15/25160/
+    # - assets/maptiles/15/25161/
+    # - assets/maptiles/15/25162/
+    # - assets/maptiles/15/25163/
+    # - assets/maptiles/15/25164/
+    # - assets/maptiles/15/25165/
+    # - assets/maptiles/15/25166/
+    # - assets/maptiles/15/25167/
+    # - assets/maptiles/15/25168/
+    # - assets/maptiles/15/25169/
+    # - assets/maptiles/15/25170/
+    # - assets/maptiles/15/25171/
+    # - assets/maptiles/15/25172/
+    # - assets/maptiles/15/25173/
+    # - assets/maptiles/15/25174/
+    # - assets/maptiles/15/25175/
+    # - assets/maptiles/15/25176/
+    # - assets/maptiles/15/25177/
+    # - assets/maptiles/15/25178/
+    # - assets/maptiles/15/25179/
+    # - assets/maptiles/15/25180/
+    # - assets/maptiles/15/25181/
+    # - assets/maptiles/15/25182/
+    # - assets/maptiles/15/25183/
+    # - assets/maptiles/15/25184/
+    # - assets/maptiles/15/25185/
+    # - assets/maptiles/15/25186/
+    # - assets/maptiles/15/25187/
+    # - assets/maptiles/15/25188/
+    # - assets/maptiles/15/25189/
+    # - assets/maptiles/14/12562/
+    # - assets/maptiles/14/12563/
+    # - assets/maptiles/14/12564/
+    # - assets/maptiles/14/12565/
+    # - assets/maptiles/14/12566/
+    # - assets/maptiles/14/12567/
+    # - assets/maptiles/14/12568/
+    # - assets/maptiles/14/12569/
+    # - assets/maptiles/14/12570/
+    # - assets/maptiles/14/12571/
+    # - assets/maptiles/14/12572/
+    # - assets/maptiles/14/12573/
+    # - assets/maptiles/14/12574/
+    # - assets/maptiles/14/12575/
+    # - assets/maptiles/14/12576/
+    # - assets/maptiles/14/12577/
+    # - assets/maptiles/14/12578/
+    # - assets/maptiles/14/12579/
+    # - assets/maptiles/14/12580/
+    # - assets/maptiles/14/12581/
+    # - assets/maptiles/14/12582/
+    # - assets/maptiles/14/12583/
+    # - assets/maptiles/14/12584/
+    # - assets/maptiles/14/12585/
+    # - assets/maptiles/14/12586/
+    # - assets/maptiles/14/12587/
+    # - assets/maptiles/14/12588/
+    # - assets/maptiles/14/12589/
+    # - assets/maptiles/14/12590/
+    # - assets/maptiles/14/12591/
+    # - assets/maptiles/14/12592/
+    # - assets/maptiles/14/12593/
+    # - assets/maptiles/14/12594/
+    # - assets/maptiles/13/6281/
+    # - assets/maptiles/13/6282/
+    # - assets/maptiles/13/6283/
+    # - assets/maptiles/13/6284/
+    # - assets/maptiles/13/6285/
+    # - assets/maptiles/13/6286/
+    # - assets/maptiles/13/6287/
+    # - assets/maptiles/13/6288/
+    # - assets/maptiles/13/6289/
+    # - assets/maptiles/13/6290/
+    # - assets/maptiles/13/6291/
+    # - assets/maptiles/13/6292/
+    # - assets/maptiles/13/6293/
+    # - assets/maptiles/13/6294/
+    # - assets/maptiles/13/6295/
+    # - assets/maptiles/13/6296/
+    # - assets/maptiles/13/6297/
+    # - assets/maptiles/12/3140/
+    # - assets/maptiles/12/3141/
+    # - assets/maptiles/12/3142/
+    # - assets/maptiles/12/3143/
+    # - assets/maptiles/12/3144/
+    # - assets/maptiles/12/3145/
+    # - assets/maptiles/12/3146/
+    # - assets/maptiles/12/3147/
+    # - assets/maptiles/12/3148/
+    # - assets/maptiles/11/1570/
+    # - assets/maptiles/11/1571/
+    # - assets/maptiles/11/1572/
+    # - assets/maptiles/11/1573/
+    # - assets/maptiles/11/1574/
+    # - assets/maptiles/10/785/
+    # - assets/maptiles/10/786/
+    # - assets/maptiles/10/787/
+    # - assets/maptiles/9/392/
+    # - assets/maptiles/9/393/
+    # - assets/maptiles/8/196/
+    # - assets/maptiles/7/98/
+
+
+
+
+
+
+  # An image asset can refer to one or more resolution-specific "variants", see
+  # https://flutter.dev/assets-and-images/#resolution-aware
+
+  # For details regarding adding assets from package dependencies, see
+  # https://flutter.dev/assets-and-images/#from-packages
+
+  # To add custom fonts to your application, add a fonts section here,
+  # in this "flutter" section. Each entry in this list should have a
+  # "family" key with the font family name, and a "fonts" key with a
+  # list giving the asset and other descriptors for the font. For
+  # example:
+  # fonts:
+  #   - family: Schyler
+  #     fonts:
+  #       - asset: fonts/Schyler-Regular.ttf
+  #       - asset: fonts/Schyler-Italic.ttf
+  #         style: italic
+  #   - family: Trajan Pro
+  #     fonts:
+  #       - asset: fonts/TrajanPro.ttf
+  #       - asset: fonts/TrajanPro_Bold.ttf
+  #         weight: 700
+  #
+  # For details regarding fonts from package dependencies,
+  # see https://flutter.dev/custom-fonts/#from-packages
